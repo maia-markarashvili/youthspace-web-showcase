@@ -1,16 +1,15 @@
 # youthspace.ge - a full booking, payments and back-office platform
 
-**Built by:** Maia Markarashvili ·
+**Site:** [youthspace.ge](https://youthspace.ge) · **Built by:** Maia Markarashvili ·
 [LinkedIn](https://www.linkedin.com/in/maia-markarashvili/) · [GitHub](https://github.com/maia-markarashvili)
 
-A complete web platform built for **"სივრცე" (Sivrce)**, a youth development centre in
-Gldani, Tbilisi. One system covered the whole customer journey: customers found a club or
-course, paid by card and got a QR ticket; staff admitted them at the door; prices,
-schedules, texts and orders were managed from an admin panel - without a developer.
+A complete web platform built for **"სივრცე" (Youth Space)**, a youth development centre
+in Gldani, Tbilisi. One system covers the whole customer journey: customers find a club or
+course, pay by card and get a QR ticket; staff admit them at the door; prices, schedules,
+texts and orders are managed from an admin panel - without a developer.
 
-Sivrce has since closed, and the platform is no longer active. For me it was a hands-on
-project: building a complete product myself and testing it in a real environment rather
-than in a demo.
+New programmes are not being run at the moment. For me it was a hands-on project: building
+a complete product myself and testing it in a real environment rather than in a demo.
 
 > **About this repository.** A public showcase copy of the private production repository.
 > The code, database schema, migrations and documentation are the real ones. Personal
@@ -154,8 +153,7 @@ Secrets live only in the hosting provider's variables - never in the repository.
 
 ### Deployment
 
-While the project was active, Railway built from `main` on every push and served the app
-behind Cloudflare. The setup:
+Railway builds from `main` on every push and serves the app behind Cloudflare; the
 database is Neon (pooled endpoint, `postgres.js` with `prepare: false` for PgBouncer).
 Uploaded files live on a Railway volume (`UPLOAD_DIR`), with permanent documents
 versioned in `seed-uploads/` as a fallback (empty in this public copy). A nightly job
