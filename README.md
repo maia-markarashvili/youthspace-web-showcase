@@ -11,6 +11,12 @@ texts and orders are managed from an admin panel - without a developer.
 New programmes are not being run at the moment. For me it was a hands-on project: building
 a complete product myself and testing it in a real environment rather than in a demo.
 
+Beyond the platform, as the centre's founder I initiated its non-commercial programmes:
+the literary contest ["A Story That Starts with a Book"](https://youthspace.ge/stories/litkonkursi-2026-pirobebi)
+(2026, ages 13-23), a debate championship, and two studies on young people and school
+life ([2023](https://youthspace.ge/stories/kvleva-saskolo-cxovreba-2023),
+[2026](https://youthspace.ge/stories/kvleva-momavali-molodinebi-2026)).
+
 > **About this repository.** A public showcase copy of the private production repository.
 > The code, database schema, migrations and documentation are the real ones. Personal
 > content (participants' photos and texts, news, the course archive, uploaded documents)
@@ -30,8 +36,7 @@ I took this project from an idea to a working system, end to end:
 - **Development** - built the application with AI-assisted development (Claude Code):
   data model, payments, integrations, admin panel, deployment and operations.
 - **Launch** - production hosting, live card-payment integration and encrypted nightly
-  backups. After launch I assessed the effort the venture would need and decided to
-  pause it early; the platform remains as a working showcase.
+  backups. The platform was paused soon after launch and remains as a working showcase.
 
 ## What was delivered
 
