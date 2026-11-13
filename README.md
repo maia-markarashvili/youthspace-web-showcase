@@ -29,8 +29,9 @@ I took this project from an idea to a working system, end to end:
   releases and accepted every change against the real workflow of the staff.
 - **Development** - built the application with AI-assisted development (Claude Code):
   data model, payments, integrations, admin panel, deployment and operations.
-- **Launch and support** - production hosting, payment integration, backups, and
-  continuous improvement based on how customers and staff actually used it.
+- **Launch** - production hosting, live card-payment integration and encrypted nightly
+  backups. After launch I assessed the effort the venture would need and decided to
+  pause it early; the platform remains as a working showcase.
 
 ## What was delivered
 
