@@ -1,0 +1,1 @@
+ALTER TABLE "account_verifications" ADD COLUMN "sms_phone_key" text;

@@ -1,0 +1,1 @@
+ALTER TABLE "content_posts" ADD COLUMN "related_links" jsonb;

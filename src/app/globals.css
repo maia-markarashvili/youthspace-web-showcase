@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* ── დიზაინის სისტემა (PRD §9) ─────────────────────────────────
+   ფერები ლოგოდან; მაქს. 2 შრიფტი; ერთი radius/shadow scale;
+   კონტრასტი AA — მუქ მწვანეზე თეთრი ტექსტი, ღია მწვანე მხოლოდ აქცენტად. */
+@theme {
+  --color-green-dark: #2f5e34;
+  --color-green-mid: #6fa36b;
+  --color-green-light: #9bd08a;
+  --color-ink: #1f2421;
+  --color-cream: #eef3ec;
+
+  /* დამხმარე ტონები (ბორდერები, მეორეული ტექსტი) */
+  --color-ink-muted: #55605a;
+  --color-line: #dde6da;
+
+  --font-sans: var(--font-georgian), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 1.25rem;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 2px rgb(31 36 33 / 0.04), 0 8px 24px rgb(31 36 33 / 0.06);
+  --shadow-card-hover:
+    0 2px 4px rgb(31 36 33 / 0.06), 0 16px 40px rgb(31 36 33 / 0.1);
+
+  /* fluid ტიპოგრაფია — mobile-first (§9).
+     დესკტოპის max-ები ~80%-ზეა ჩამოწეული (2026-08-19): mobile min-ები უცვლელი,
+     ე.ი. ტელეფონზე იგივე რჩება, დიდ ეკრანზე კი ხედი უფრო კომპაქტურია. */
+  --text-display: clamp(2rem, 1.4rem + 2vw, 2.75rem);
+  --text-display--line-height: 1.14;
+  --text-h1: clamp(1.75rem, 1.3rem + 1.6vw, 2.25rem);
+  --text-h1--line-height: 1.2;
+  --text-h2: clamp(1.375rem, 1.15rem + 0.9vw, 1.5rem);
+  --text-h2--line-height: 1.28;
+  --text-h3: clamp(1.125rem, 1.05rem + 0.3vw, 1.2rem);
+  --text-h3--line-height: 1.35;
+  --text-lead: clamp(1.0625rem, 1rem + 0.28vw, 1.125rem);
+  --text-lead--line-height: 1.7;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    text-wrap: pretty;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* ხილული ფოკუსი — a11y (§11) */
+  :focus-visible {
+    outline: 2px solid var(--color-green-dark);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* გვერდის სტანდარტული კონტეინერი */
+  .container-page {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 80rem;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-page {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-page {
+      padding-inline: 2rem;
+    }
+  }
+
+  /* სექციის ზედა ეტიკეტი */
+  .eyebrow {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-green-mid);
+  }
+}

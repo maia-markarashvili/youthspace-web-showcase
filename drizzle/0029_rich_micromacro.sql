@@ -1,0 +1,1 @@
+ALTER TABLE "pricing_settings" ADD COLUMN "show_public_seats" boolean DEFAULT false NOT NULL;

@@ -1,0 +1,2 @@
+ALTER TABLE "account_verifications" ADD COLUMN "email_sent" boolean DEFAULT false NOT NULL;--> statement-breakpoint
+ALTER TABLE "account_verifications" ADD COLUMN "sms_sent" boolean DEFAULT false NOT NULL;
